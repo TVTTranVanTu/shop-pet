@@ -1,0 +1,97 @@
+.slider {
+    box-sizing: border-box;
+    img {
+        height: 343px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+    }
+    .search__shop {
+        position: relative;
+        margin-top: -70px;
+        .container {
+            .search__body {
+                background-color: #fff;
+                border-radius: 4px;
+                .search__tab {
+                    display: flex;
+                    border-bottom: 1px solid #d9d9d9;
+                    li {
+                        a {
+                            display: block;
+                            color: #000;
+                            padding: 10px 20px;
+                            transform: translateY(1px);
+                            i {
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                    .active a {
+                        font-weight: 600;
+                        color: #ff8917;
+                        border-bottom: 1px solid #ff8917;
+                    }
+                }
+                .search__main {
+                    padding: 30px 15px;
+                    .search__pet,
+                    .search__food {
+                        display: none;
+                        .search__flex {
+                            display: flex;
+                            align-items: flex-end;
+                            flex-wrap: wrap;
+                            box-sizing: border-box;
+                            .search__input {
+                                width: 50%;
+                                padding-right: 15px;
+                                box-sizing: border-box;
+                                .inputInline {
+                                    position: relative;
+                                    .ant-input-affix-wrapper {
+                                        .ant-input {
+                                            padding: 0;
+                                            border: none;
+                                            outline: none;
+                                        }
+                                        .ant-input-lg {
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                            }
+                            .search__price {
+                                box-sizing: border-box;
+                                width: 30%;
+                                padding-right: 15px;
+                                .select {
+                                    width: 100%;
+                                    padding: 10px 15px;
+                                    background-color: #fff;
+                                    border: 1px solid #d9d9d9;
+                                    border-radius: 2px;
+                                    cursor: pointer;
+                                    option {
+                                        padding: 5px;
+                                    }
+                                }
+                            }
+                            .search__btn {
+                                width: 20%;
+                                button {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    .open {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

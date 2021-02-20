@@ -1,0 +1,270 @@
+.flag-red {
+  fill: rgb(216, 0, 39);
+}
+.flag-oranger {
+  fill: rgb(255, 218, 68);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 1170px;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.dropdown,
+.dropdown-toggle {
+  position: relative;
+}
+.dropdown-toggle {
+  color: #000;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 4px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  text-align: left;
+  padding: 5px 15px;
+  transition: all 0.3s;
+}
+.btn {
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  background-image: none;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+  touch-action: manipulation;
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 4px;
+}
+.green-1 {
+  color: #389e0d !important;
+}
+.semibold {
+  font-weight: 600 !important;
+  margin: 0 !important;
+}
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+  outline: none;
+  border: none;
+}
+button {
+  background: 0 0;
+  border: none;
+  padding: 0;
+}
+
+ul li a:hover,
+ul li span:hover,
+ul li a:active {
+  color: #ff8917 !important;
+  border-color: #ff8917 !important;
+}
+
+.mb15 {
+  margin-bottom: 15px !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.ant-form {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+}
+.ant-form-item {
+  color: #000;
+  margin-bottom: 15px;
+}
+.flex1 {
+  flex: 1 1;
+}
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.ant-dropdown-menu {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+.ant-form-item {
+  box-sizing: border-box;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  margin: 0 0 24px;
+  vertical-align: top;
+}
+
+.ant-form-horizontal .ant-form-item-control {
+  flex: 1 1;
+}
+.ant-form-item-control {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.ant-form-item-control-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+.ant-form-item-control-input-content {
+  flex: auto;
+  max-width: 100%;
+}
+.ant-input {
+  border: 1px solid #d9d9d9;
+}
+.ant-input {
+  box-sizing: border-box;
+  margin: 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.form-control {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  transition: all 0.3s;
+}
+.ant-input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-btn {
+  text-shadow: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  height: 40px;
+}
+.ant-btn-primary,
+.ant-btn-primary:focus,
+.ant-btn-primary:hover {
+  background-color: #ff8917;
+  border-color: #ff8917;
+  color: #fff;
+}
+
+.ant-btn,
+.ant-dropdown-menu,
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-modal-content {
+  border-radius: 4px;
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.text-center {
+  text-align: center !important;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.ant-input-affix-wrapper-lg,
+.ant-input-lg,
+.ant-select-lg {
+  font-size: 14px;
+}
+.ant-input-affix-wrapper-lg,
+.ant-input-lg,
+.vntDatepicker .ant-picker-large {
+  height: 40px;
+  padding: 0 15px;
+}
+.ant-form-item-control-input-content {
+  flex: auto;
+  max-width: 100%;
+}
+.ant-input-affix-wrapper {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
+  display: inline-flex;
+}
+.ant-input-affix-wrapper-lg,
+.ant-input-lg {
+  height: 40px;
+  padding: 0 15px;
+}
+.ant-input-suffix {
+  align-items: center;
+  display: flex;
+  flex: none;
+  cursor: pointer;
+}
+.search__body {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
