@@ -268,3 +268,10 @@ h2 {
 .search__body {
   box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #404040;
+}

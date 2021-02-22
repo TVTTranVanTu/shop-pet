@@ -6,12 +6,13 @@ import Footer from './Components/Footer';
 import Home from './Layouts/Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import PetHeart from './Layouts/PetHeart';
-import PetFood from './Layouts/PetFood';
+import PetFoodPage from './Layouts/PetFoodPage';
 import PageHandbook from './Layouts/PageHandbook';
 import PageAbout from './Layouts/PageAbout';
 import Cart from './Layouts/Cart';
 import Register from './Layouts/Register';
 import SingIn from './Layouts/SingIn';
+import ProductScreen from './Layouts/ProductScreen';
 
 function App() {
   return (
@@ -22,13 +23,13 @@ function App() {
         <div>
           <Route exact path="/" component={Home}></Route>
           <Route path="/pet-heart" component={PetHeart}></Route>
-          <Route path="/pet-food" component={PetFood}></Route>
+          <Route path="/pet-food" component={PetFoodPage}></Route>
           <Route path="/handbook" component={PageHandbook}></Route>
           <Route path="/about" component={PageAbout}></Route>
           <Route path="/cart" component={Cart}></Route>
           <Route path="/sign-in" component={SingIn}></Route>
           <Route path="/register" component={Register}></Route>
-
+          <Route path="/product/:id" component={ProductScreen}></Route>
         </div>
         <Footer></Footer>
       </div>

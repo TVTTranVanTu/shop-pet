@@ -1,0 +1,73 @@
+.pet__food {
+    margin-top: 20px;
+    width: 19%;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 0 #ccc;
+    border-radius: 5px;
+    transition: border 0.2s linear;
+    padding: 15px;
+    height: 100%;
+    box-sizing: border-box;
+    .box__image {
+        min-height: 220px;
+        position: relative;
+        margin: 0 auto;
+        box-sizing: border-box;
+        img {
+            display: block;
+            max-width: 100%;
+            width: 201px;
+            height: 201px;
+            margin: 0 auto 10px;
+            border: none;
+            transition: all 2s ease;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+    .box__text {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        padding-bottom: 10px;
+        position: relative;
+        width: 100%;
+        height: 140px;
+        box-sizing: border-box;
+        .title__box {
+            a {
+                padding-top: 0;
+                color: #000;
+                text-align: left;
+                line-height: 1.5;
+                white-space: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                box-sizing: border-box;
+                h2 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin: 0 !important;
+                }
+            }
+        }
+        .price__box {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            .price {
+                font-size: 22px;
+                font-weight: 400;
+                text-align: left;
+                color: #d0011b;
+            }
+        }
+    }
+}

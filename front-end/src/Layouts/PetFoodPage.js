@@ -1,14 +1,14 @@
 import React from 'react';
+import PetFoodList from '../Components/PetFoodList';
 import Slider from '../Components/Slider';
-
-function PetFood(props) {
+function PetFoodPage(props) {
     return (
         <div>
             <Slider></Slider>
+            <PetFoodList></PetFoodList>
 
-            Page pet food
         </div>
     );
 }
 
-export default PetFood;
+export default PetFoodPage;
