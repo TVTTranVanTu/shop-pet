@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 function Header(props) {
     const [active, setActive] = useState('pet');
-
+    const cart = useSelector((state) => state.cart);
+    const { cartItems } = cart;
     return (
 
         <div className="header__navbar">
@@ -44,6 +47,9 @@ function Header(props) {
                             <Link to="/cart">
                                 <i className="fas fa-shopping-cart"></i>
                                 <span>Giỏ hàng</span>
+                                {cartItems.length > 0 && (
+                                    <span className="badge">{cartItems.length}</span>
+                                )}
                             </Link>
                         </li>
                     </ul>

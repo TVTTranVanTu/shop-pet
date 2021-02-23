@@ -112,7 +112,8 @@ ul li a:active {
 .mb0 {
   margin-bottom: 0 !important;
 }
-.ant-dropdown-menu {
+.ant-dropdown-menu,
+.cart__item {
   box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 .ant-form-item {
@@ -274,4 +275,30 @@ h2 {
 }
 .rating span:last-child {
   color: #404040;
+}
+.loading {
+  display: block !important;
+}
+.success {
+  color: #20a020;
+}
+.danger {
+  color: #a02020;
+}
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
+}
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
 }

@@ -82,20 +82,33 @@
                             bottom: 30px;
                             text-align: center;
                             .pd__bottom {
-                                padding-bottom: 10px;
+                                padding-bottom: 20px;
                                 text-align: left;
                             }
                             .qty {
-                                span {
-                                    font-size: 16px;
-                                    color: green;
+                                select {
+                                    width: 60%;
+                                    padding: 10px 20px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 4px;
+                                    background-color: #fff;
+                                    float: right;
                                 }
                             }
+                            .buy-box__title {
+                                font-size: 18px;
+                                width: 40%;
+                                font-weight: 400;
+                                color: #000 !important;
+                            }
                             .price {
-                                span {
+                                .qty__price {
+                                    width: 60%;
                                     font-size: 18px;
                                     font-weight: 400;
                                     color: red;
+                                    float: right;
+                                    text-align: right;
                                 }
                             }
                             .ant-btn {
