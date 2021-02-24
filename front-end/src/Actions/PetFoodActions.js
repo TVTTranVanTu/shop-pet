@@ -1,5 +1,6 @@
 import { PETFOOD_DETAIL_FAIL, PETFOOD_DETAIL_REQUEST, PETFOOD_DETAIL_SUCCESS, PETFOOD_LIST_FAIL, PETFOOD_LIST_REQUEST, PETFOOD_LIST_SUCCESS } from "../Constants/PetFoodContants"
 import Axios from 'axios';
+
 export const listPetFood = () => async (dispatch) => {
     dispatch({
         type: PETFOOD_LIST_REQUEST
@@ -28,4 +29,4 @@ export const detailPetFood = (productId) => async (dispatch) => {
                 ? error.response.data.message : error.message,
         })
     }
-}
+};

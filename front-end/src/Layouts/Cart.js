@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { addToCart } from '../Actions/CartActions';
+import { addToCart, removeFromCart } from '../Actions/CartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import MessageBox from '../Components/MessageBox';
 function Cart(props) {
@@ -15,7 +15,7 @@ function Cart(props) {
         }
     }, [dispatch, productId, qty]);
     const removeFromCartHandle = (id) => {
-
+        dispatch(removeFromCart(id));
     }
     const checkoutHandler = () => {
         props.history.push('/signin?redirect=shipping');
@@ -26,7 +26,7 @@ function Cart(props) {
                 <h1>Giỏ hàng của bạn</h1>
                 {cartItems.length === 0 ?
                     (<MessageBox>
-                        Cart is empty<Link to="/pet-food">Mua hàng</Link>
+                        Chưa có sản phẩm nào .&nbsp;<Link to="/pet-food">Mua hàng</Link>
                     </MessageBox>) : (
                         <div className="list__cartitem">
                             {cartItems.map((item) => (
@@ -55,25 +55,33 @@ function Cart(props) {
                                         <span>{item.price}đ</span>
                                         </div>
                                         <div className="cart__button">
-                                            <button onClick={removeFromCartHandle(item.product)} className="ant-btn ant-btn-primary" type="button" >Xóa</button>
+                                            <button onClick={() => removeFromCartHandle(item.product)} className="ant-btn ant-btn-primary" type="button" >Xóa</button>
                                         </div>
                                     </div>
                                 </div>)
                             )}
-
                         </div>
                     )}
-                <div className="subtotal">
-                    <p>
-                        Tổng giá&nbsp;
+                <div className="cart__bottom">
+                    <div className="backto_listfood">
+                        <Link to="/pet-food">
+                            <i className="fas fa-backward"></i>
+                            Tiếp tục mua hàng
+                            </Link>
+                    </div>
+                    <div className="subtotal">
+                        <p>
+                            Tổng giá&nbsp;
                         ({cartItems.reduce((a, b) => a + b.qty, 0)} sản phẩm) :&nbsp;
                     <span>
-                            {cartItems.reduce((a, b) => a + b.price * b.qty, 0)}đ
+                                {cartItems.reduce((a, b) => a + b.price * b.qty, 0)}đ
                     </span>
-                    </p>
+                        </p>
 
-                    <button type="button" onClick={checkoutHandler} className="ant-btn ant-btn-primary" disabled={cartItems.length === 0}>Tiến hành thanh toán</button>
+                        <button type="button" onClick={checkoutHandler} className="ant-btn ant-btn-primary" disabled={cartItems.length === 0}>Tiến hành thanh toán</button>
+                    </div>
                 </div>
+
             </div>
         </div>
     );

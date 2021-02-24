@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
+
 const PetFoodPage = {
+    users: [
+        {
+            name: 'tu',
+            email: 'd38tranvantu@gmail.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+        {
+            name: 'ly',
+            email: 'lyml@gmail.com',
+            password: bcrypt.hashSync('5678', 8),
+            isAdmin: false,
+        },
+    ],
     products: [
         {
-            _id: '1',
             name: 'Bánh thưởng cho chó vị thịt bò và sữa VEGEBRAND Milk & Beef Flavor',
             category: 'food',
             image: '/assets/img/petfood/banh.jpg',
@@ -13,7 +28,6 @@ const PetFoodPage = {
             description: 'Còn hàng',
         },
         {
-            _id: '2',
             name: 'Thuốc Canxi cho chó VEGEBRAND Ca+MG Big Bone Bar',
             category: 'food',
             image: '/assets/img/petfood/canxi.jpg',
@@ -25,7 +39,6 @@ const PetFoodPage = {
             description: 'Còn hàng',
         },
         {
-            _id: '3',
             name: 'Pate cho chó vị thịt gà JERHIGH Chicken',
             category: 'food',
             image: '/assets/img/petfood/pate.jpg',
@@ -37,7 +50,6 @@ const PetFoodPage = {
             description: 'Hết hàng',
         },
         {
-            _id: '4',
             name: 'Thức ăn cho chó mẹ và chó con MOSHM Babydog & Mother Nutrition',
             category: 'food',
             image: '/assets/img/petfood/moshm.jpg',
@@ -49,7 +61,6 @@ const PetFoodPage = {
             description: 'Còn hàng',
         },
         {
-            _id: '5',
             name: 'Pate cho chó vị gan gà IRIS One Care Chicken Liver',
             category: 'food',
             image: '/assets/img/petfood/pate1.jpg',
@@ -61,7 +72,6 @@ const PetFoodPage = {
             description: 'Còn hàng',
         },
         {
-            _id: '6',
             name: 'Pate cho mèo vị cá ngừ và cá thu CATIDEA Fairy Chef Gavy Can Tuna & Mackerel',
             category: 'food',
             image: '/assets/img/petfood/pate-cho-meo.jpg',
@@ -73,7 +83,6 @@ const PetFoodPage = {
             description: 'Con hàng',
         },
         {
-            _id: '7',
             name: 'Pate cho mèo vị cá ngừ và thịt gà IRIS Bonito & Chicken Wet Cat Food',
             category: 'food',
             image: '/assets/img/petfood/iris-bonito.jpg',
@@ -85,7 +94,6 @@ const PetFoodPage = {
             description: 'Còn hàng',
         },
         {
-            _id: '8',
             name: 'Thức ăn cho mèo trưởng thành CATIDEA Fairy Chef Adult Nutrition',
             category: 'food',
             image: '/assets/img/petfood/catidea.jpg',
@@ -97,7 +105,6 @@ const PetFoodPage = {
             description: 'Còn hàng',
         },
         {
-            _id: '9',
             name: 'Thức ăn cho mèo PRO PAC ULTIMATES Deep Sea Select Indoor Formula',
             category: 'food',
             image: '/assets/img/petfood/pro-pac-ultimates.jpg',
@@ -109,7 +116,7 @@ const PetFoodPage = {
             description: 'Còn hàng',
         },
         {
-            _id: '10',
+
             name: 'Pate cho mèo vị cá ngừ và cá trứng IRIS',
             category: 'food',
             image: '/assets/img/petfood/pate-iris.jpg',

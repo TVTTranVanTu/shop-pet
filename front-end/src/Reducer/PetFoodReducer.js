@@ -7,7 +7,10 @@ import {
     PETFOOD_LIST_SUCCESS
 } from "../Constants/PetFoodContants";
 
-export const petfoodListReducer = (state = { products: [] }, action) => {
+export const petfoodListReducer = (
+    state = { loading: true, products: [] },
+    action
+) => {
     switch (action.type) {
         case PETFOOD_LIST_REQUEST:
             return { loading: true }
@@ -18,9 +21,12 @@ export const petfoodListReducer = (state = { products: [] }, action) => {
         default:
             return state;
     }
-}
+};
 
-export const petfoodDetailReducer = (state = { product: {}, loading: true }, action) => {
+export const petfoodDetailReducer = (
+    state = { product: {}, loading: true },
+    action
+) => {
     switch (action.type) {
         case PETFOOD_DETAIL_REQUEST:
             return { loading: true }
@@ -31,4 +37,4 @@ export const petfoodDetailReducer = (state = { product: {}, loading: true }, act
         default:
             return state;
     }
-}
+};

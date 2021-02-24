@@ -10,7 +10,7 @@ function PetFoodList(props) {
     const { loading, error, products } = petfoodList;
     useEffect(() => {
         dispatch(listPetFood());
-    }, []);
+    }, [dispatch]);
     return (
 
         <div className="pet-food__list">
@@ -20,14 +20,16 @@ function PetFoodList(props) {
                     error ? (<MessageBox variant="danger">{error}</MessageBox>)
                         : (
                             <div>
-                                {products.length === 0 && <MessageBox>No Product Found</MessageBox>}
+                                {products.length === 0 && (<MessageBox>No Product Found</MessageBox>)}
                                 <h2 className="title">THỨC ĂN DÀNH CHO THÚ CƯNG</h2>
                                 <div className="list__product">
                                     {products.map((product) => (
                                         <PetFood key={product._id} product={product}></PetFood>
                                     ))}
                                 </div>
-                            </div>)}
+                            </div>
+                        )
+                }
             </div>
         </div>
 

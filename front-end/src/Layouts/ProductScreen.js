@@ -50,7 +50,7 @@ function ProductScreen(props) {
                                                 <p>Số lượng : &nbsp;{product.countInStock}</p>
                                             </div>
                                             <div className="buy__box">
-                                                {product.countInStock > 0 && (
+                                                {product.countInStock > 0 ? (
                                                     <div className="qty pd__bottom">
                                                         <span className="buy-box__title">Số lượng : &nbsp;</span>
                                                         <select value={qty}
@@ -63,14 +63,17 @@ function ProductScreen(props) {
                                                             )}
                                                         </select>
                                                     </div>
-                                                )}
+                                                ) : (<div className="qty__noon pd__bottom">Hết hàng</div>)}
 
                                                 <div className="price pd__bottom">
                                                     <span className="buy-box__title"> Tổng giá :&nbsp;</span>
-                                                    <span className="qty__price">{qty * product.price}đ</span>
+                                                    {product.countInStock > 0 ? (
+                                                        <span className="qty__price">{qty * product.price}đ</span>
+                                                    ) : (<span className="qty__price">0đ</span>)}
+
                                                 </div>
 
-                                                <button onClick={AddToCardHandle} type="button" className="ant-btn ant-btn-primary">Thêm vào giỏ hàng</button>
+                                                <button onClick={AddToCardHandle} type="button" className="ant-btn ant-btn-primary" disabled={product.countInStock === 0}>Thêm vào giỏ hàng</button>
                                             </div>
                                         </div>
                                     </div>
