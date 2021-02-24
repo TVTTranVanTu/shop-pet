@@ -29,6 +29,8 @@ function App() {
           <Route path="/about" component={PageAbout}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/cart/:id?" component={Cart}></Route>
+          <Route path="/signin" component={SingIn}></Route>
+          <Route path="/register" component={Register}></Route>
         </div>
         <Footer></Footer>
       </div>
