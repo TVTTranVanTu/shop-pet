@@ -1,0 +1,60 @@
+.modal__header {
+    display: flex;
+    padding: 5px 20px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    position: relative;
+    h1 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .close__box {
+        text-align: right;
+        font-size: 25px;
+        font-weight: 300;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        svg {
+            padding-top: 6px;
+        }
+    }
+}
+.signin {
+    padding: 20px;
+
+    .form {
+        .mr__bt {
+            margin-bottom: 15px;
+            .formLogin__or {
+                border-top: 1px solid #d9d9d9;
+                margin-top: 10px;
+                text-align: center;
+                span {
+                    padding: 5px 15px;
+                    background-color: #fff;
+                    display: inline-block;
+                    transform: translateY(-15px);
+                }
+            }
+            .btn__group {
+                display: block;
+                .btn {
+                    width: 100%;
+                    svg {
+                        padding-right: 10px;
+                    }
+                }
+            }
+            p {
+                span {
+                    color: #ff8917;
+                    cursor: pointer;
+                }
+            }
+        }
+        .ant-btn {
+            width: 100%;
+        }
+    }
+}

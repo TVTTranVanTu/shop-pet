@@ -302,3 +302,8 @@ h2 {
   color: #20a020;
   background-color: #eeffe0;
 }
+.btn.btn_outline {
+  color: #878787;
+  background-color: #fff;
+  border-color: #d9d9d9;
+}

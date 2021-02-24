@@ -27,8 +27,6 @@ function App() {
           <Route path="/pet-food" component={PetFoodPage}></Route>
           <Route path="/handbook" component={PageHandbook}></Route>
           <Route path="/about" component={PageAbout}></Route>
-          <Route path="/sign-in" component={SingIn}></Route>
-          <Route path="/register" component={Register}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/cart/:id?" component={Cart}></Route>
         </div>

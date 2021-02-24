@@ -2,8 +2,8 @@ import React from 'react';
 
 function Register(props) {
     return (
-        <div>
-
+        <div className="register">
+            register page
         </div>
     );
 }
