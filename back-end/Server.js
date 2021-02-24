@@ -1,11 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import productRouter from './Routers/ProductRouter.js';
 import userRouter from './Routers/UserRouter.js';
 
 const port = process.env.PORT || 3333;
 
+dotenv.config();
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/petshop', {
     useNewUrlParser: true,
