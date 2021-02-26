@@ -13,6 +13,7 @@ import Cart from './Layouts/Cart';
 import Register from './Layouts/Register';
 import SingIn from './Layouts/SingIn';
 import ProductScreen from './Layouts/ProductScreen';
+import ShippingAddress from './Layouts/ShippingAddress';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/cart/:id?" component={Cart}></Route>
           <Route path="/signin" component={SingIn}></Route>
           <Route path="/register" component={Register}></Route>
+          <Route path="/shipping" component={ShippingAddress}></Route>
         </div>
         <Footer></Footer>
       </div>

@@ -55,7 +55,8 @@
                 }
             }
             p {
-                span {
+                span,
+                a {
                     color: #ff8917;
                     cursor: pointer;
                 }
@@ -63,16 +64,6 @@
         }
         .ant-btn {
             width: 100%;
-        }
-    }
-}
-.register {
-    .form {
-        .mr__bt {
-            margin-bottom: 20px !important;
-            p {
-                text-align: center;
-            }
         }
     }
 }

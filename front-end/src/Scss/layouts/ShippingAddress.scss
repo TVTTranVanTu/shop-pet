@@ -1,0 +1,22 @@
+.shipping__address {
+    .container {
+        .form {
+            width: 50%;
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin: 0 auto;
+            .mr__bt {
+                margin-bottom: 20px;
+            }
+            .ant-btn {
+                width: 100%;
+                text-align: right;
+            }
+            .btn__r {
+                width: 25%;
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+}

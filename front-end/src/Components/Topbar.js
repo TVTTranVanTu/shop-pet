@@ -1,26 +1,25 @@
 import React, { useState } from 'react';
 import logo from '../assets/img/icon.png';
 import { Link } from 'react-router-dom';
-import SingIn from '../Layouts/SingIn';
-import Register from '../Layouts/Register';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { signout } from '../Actions/UserActions';
 
 function Topbar(props) {
-    const [visible, setVisible] = useState(false);
-    const [visibleReg, setVisibleReg] = useState(false);
+    const [hidden, setHidden] = useState(true);
     const [currency, setCurrency] = useState(false);
     const [language, setLanguage] = useState(false);
-    const openVisible = () => {
-        setVisible(true);
+
+    const userSignin = useSelector((state) => state.userSignin);
+    const { userInfo } = userSignin;
+
+    const dispatch = useDispatch();
+
+    const signoutHandler = () => {
+        dispatch(signout());
     }
-    const closeVisible = () => {
-        setVisible(false);
-    }
-    const openVisibleReg = () => {
-        setVisibleReg(true);
-    }
-    const closeVisibleReg = () => {
-        setVisibleReg(false);
+    const hiddenChange = () => {
+        setHidden(!hidden);
+        console.log(hidden);
     }
     return (
         <div className="topbar">
@@ -134,19 +133,47 @@ function Topbar(props) {
                         </div>
                     </li>
                     <li>
-                        <div className="topbar__login">
-                            <Link to="/signin">
-                                <button type="button" className="btn btn_outlineOrange btn_sm formLogin__click" onClick={openVisible}>
-                                    <span>Đăng nhập</span>
-                                </button>
-                            </Link>
-                            <Link to="register">
-                                <button type="button" className="btn btn_orange btn_sm formLogin__click" onClick={openVisibleReg}>
-                                    <span className="reg_btn">Đăng ký</span>
-                                </button>
-                            </Link>
+                        {
+                            userInfo ? (
+                                <div className="user__account" onClick={hiddenChange}>
+                                    <div className="account__info" >
+                                        <span className="account__name">{userInfo.name}</span>
+                                        <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg" className="svgArrow">
+                                            <path fillRule="evenodd" clipRule="evenodd" d="M8.48532 0.242641L4.24268 4.12306L3.51667e-05 0.242641L8.48532 0.242641Z" fill="#878787">
+                                            </path>
+                                        </svg>
+                                    </div>
 
-                        </div>
+                                    <div className={hidden === true ? `account__content hidden` : `account__content`}>
+                                        <div className="history bd__bt">
+                                            <i className="fas fa-history"></i>
+                                            <span>Hoạt động gần đây</span>
+                                        </div>
+                                        <div className="account bd__bt">
+                                            <i className="fas fa-user-circle"></i>
+                                            <span>Thông tin tài khoản</span>
+                                        </div>
+                                        <div className="sign__out">
+                                            <button type="button" className="ant-btn ant-btn-primary ant-btn-lg w100" onClick={signoutHandler}>
+                                                <Link to="#signout" >Đăng xuất</Link>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>)
+                                : (
+                                    <div className="topbar__login">
+                                        <Link to="/signin">
+                                            <button type="button" className="btn btn_outlineOrange btn_sm formLogin__click">
+                                                <span>Đăng nhập</span>
+                                            </button>
+                                        </Link>
+                                        <Link to="register">
+                                            <button type="button" className="btn btn_orange btn_sm formLogin__click">
+                                                <span className="reg_btn">Đăng ký</span>
+                                            </button>
+                                        </Link>
+                                    </div>
+                                )}
                     </li>
                 </ul>
             </div>

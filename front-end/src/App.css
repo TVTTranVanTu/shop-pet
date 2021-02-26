@@ -113,7 +113,8 @@ ul li a:active {
   margin-bottom: 0 !important;
 }
 .ant-dropdown-menu,
-.cart__item {
+.cart__item,
+.account__content {
   box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 .ant-form-item {

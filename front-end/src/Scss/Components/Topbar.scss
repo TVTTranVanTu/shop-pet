@@ -74,6 +74,49 @@
                         color: #ff8917;
                     }
                 }
+                .user__account {
+                    .account__info {
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        .account__name {
+                            margin-right: 10px;
+                        }
+                    }
+                    .account__content {
+                        position: absolute;
+                        width: 250px;
+                        top: 50px;
+                        padding: 20px;
+                        right: 70px;
+                        background-color: #fff;
+                        display: block;
+                        .sign__out {
+                            .ant-btn {
+                                width: 100%;
+                                a {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    color: #fff !important;
+                                }
+                            }
+                        }
+                        .bd__bt {
+                            border-bottom: 1px solid #ddd;
+                            font-size: 16px;
+                            font-weight: 400;
+                            padding: 10px 0;
+                            i {
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                    .hidden {
+                        display: none;
+                    }
+                }
                 .topbar__login {
                     .btn {
                         margin-left: 15px;

@@ -77,7 +77,6 @@ function Cart(props) {
                                 {cartItems.reduce((a, b) => a + b.price * b.qty, 0)}đ
                     </span>
                         </p>
-
                         <button type="button" onClick={checkoutHandler} className="ant-btn ant-btn-primary" disabled={cartItems.length === 0}>Tiến hành thanh toán</button>
                     </div>
                 </div>
