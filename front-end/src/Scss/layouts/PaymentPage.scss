@@ -1,0 +1,67 @@
+.payment {
+    h1 {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 40px;
+    }
+    .form {
+        margin: 60px 0;
+        display: flex;
+        .main-container {
+            display: flex;
+            width: 70%;
+            box-sizing: border-box;
+            .payment__method {
+                text-align: center;
+                .pay-method-item {
+                    margin: 0 4px 5px 0;
+                    width: 128px;
+                    height: 128px;
+                    text-align: center;
+                    background-color: #f5f6f9;
+                    padding: 15px;
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        margin-top: 24px;
+                        margin-bottom: 12px;
+                        color: #183545;
+                    }
+                    .title {
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 12px;
+                        margin-bottom: 4px;
+                        color: #404040;
+                    }
+                    .subtitle {
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #757575;
+                    }
+                }
+            }
+        }
+        .sub__total {
+            width: 30%;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 4px;
+            margin-left: 20px;
+            h2 {
+                text-align: center;
+            }
+            span {
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .total {
+                color: red;
+                float: right;
+            }
+            .ant-btn {
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+}

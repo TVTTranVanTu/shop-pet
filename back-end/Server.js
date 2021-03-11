@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import productRouter from './Routers/ProductRouter.js';
 import userRouter from './Routers/UserRouter.js';
+import orderRouter from './Routers/OrderRouter.js';
 
 const port = process.env.PORT || 3333;
 
@@ -19,6 +20,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/petshop', {
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
+app.use('/api/orders', orderRouter);
 app.use((err, req, res, next) => {
     res.status(500).send({ message: err.message });
 });

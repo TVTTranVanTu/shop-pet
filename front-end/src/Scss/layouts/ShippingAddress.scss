@@ -1,5 +1,9 @@
 .shipping__address {
     .container {
+        h1 {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 40px;
+        }
         .form {
             width: 50%;
             border: 1px solid #ddd;

@@ -70,13 +70,13 @@ function Cart(props) {
                             </Link>
                     </div>
                     <div className="subtotal">
-                        <p>
+                        <span>
                             Tổng giá&nbsp;
                         ({cartItems.reduce((a, b) => a + b.qty, 0)} sản phẩm) :&nbsp;
-                    <span>
-                                {cartItems.reduce((a, b) => a + b.price * b.qty, 0)}đ
-                    </span>
-                        </p>
+                        </span>
+                        <span className="sub__total">
+                            {cartItems.reduce((a, b) => a + b.price * b.qty, 0)}đ
+                        </span>
                         <button type="button" onClick={checkoutHandler} className="ant-btn ant-btn-primary" disabled={cartItems.length === 0}>Tiến hành thanh toán</button>
                     </div>
                 </div>

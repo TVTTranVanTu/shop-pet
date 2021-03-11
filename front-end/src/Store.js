@@ -3,6 +3,7 @@ import { petfoodDetailReducer, petfoodListReducer } from './Reducer/PetFoodReduc
 import thuck from 'redux-thunk';
 import { cartReducer } from './Reducer/CartReducer';
 import { userRegisterReducer, userSigninReducer } from './Reducer/UserReducers';
+import { orderCreateReducer } from './Reducer/OrderReducers';
 const initialState = {
     userSignin: {
         userInfo: localStorage.getItem('userInfo')
@@ -16,6 +17,7 @@ const initialState = {
         shippingAddress: localStorage.getItem('shippingAddress')
             ? JSON.parse(localStorage.getItem('shippingAddress'))
             : {},
+        paymentMethod: 'Momo',
     }
 };
 const reducer = combineReducers(
@@ -25,6 +27,7 @@ const reducer = combineReducers(
         cart: cartReducer,
         userSignin: userSigninReducer,
         userRegister: userRegisterReducer,
+        orderCreate: orderCreateReducer
     }
 )
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

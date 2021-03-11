@@ -14,6 +14,8 @@ import Register from './Layouts/Register';
 import SingIn from './Layouts/SingIn';
 import ProductScreen from './Layouts/ProductScreen';
 import ShippingAddress from './Layouts/ShippingAddress';
+import PaymentPage from './Layouts/PaymentPage';
+import PlaceOrder from './Layouts/PlaceOrder';
 
 function App() {
 
@@ -33,6 +35,8 @@ function App() {
           <Route path="/signin" component={SingIn}></Route>
           <Route path="/register" component={Register}></Route>
           <Route path="/shipping" component={ShippingAddress}></Route>
+          <Route path="/payment" component={PaymentPage}></Route>
+          <Route path="/placeorder" component={PlaceOrder}></Route>
         </div>
         <Footer></Footer>
       </div>

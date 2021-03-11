@@ -1,0 +1,78 @@
+.place__order {
+    .container {
+        h1 {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 40px;
+        }
+        .place-order__content {
+            display: flex;
+            .cart__content {
+                width: 70%;
+                .box {
+                    padding: 20px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    margin-bottom: 30px;
+                    h2 {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+                .cart__product {
+                    .product__item {
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        border-top: 1px solid #ddd;
+                        padding: 20px 0;
+                        .product__img {
+                            width: 25%;
+                            img {
+                                width: 150px;
+                                height: 150px;
+                            }
+                        }
+                        .product__name {
+                            width: 25%;
+                            font-size: 16px;
+                        }
+                        .product__qty {
+                            width: 15%;
+                        }
+                        .product__price {
+                            width: 25%;
+                            span {
+                                color: red;
+                            }
+                        }
+                        .remove__button {
+                            width: 10%;
+                        }
+                    }
+                }
+            }
+            .subtotal__box {
+                width: 30%;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                height: 170px;
+                margin-left: 20px;
+                padding: 20px 10px;
+                .mr__bt {
+                    padding-bottom: 20px;
+                    span {
+                        float: right;
+                        font-size: 16px;
+                    }
+                    .subtotal {
+                        font-weight: 600;
+                        color: red;
+                    }
+                }
+                .ant-btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
